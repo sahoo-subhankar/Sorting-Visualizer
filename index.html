@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="/logo.png">
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+  </link>
+</head>
+
+<body>
+  <h1 class="heading"><b>Visualization of Sorting Algorithms</b></h1>
+  <div class="container">
+    <div class="custom-select row">
+      <select>
+        <option value="0">Select Sorting Algorithm</option>
+        <option value="1">Bubble Sort</option>
+        <option value="2">Insertion Sort</option>
+        <option value="3">Selection Sort</option>
+        <option value="4">Merge Sort</option>
+        <option value="5">Quick Sort</option>
+      </select>
+    </div>
+    <div class="custom-select row">
+      <select>
+        <option value="0">Select Input Order</option>
+        <option value="1">Randomized</option>
+        <option value="2">Increasing</option>
+        <option value="3">Decreasing</option>
+      </select>
+    </div>
+    <div class="custom-select row">
+      <select>
+        <option value="0">Select Speed</option>
+        <option value="1">Slow(delay-200ms)</option>
+        <option value="2">Fast(delay-100ms)</option>
+        <option value="3">Very Fast(delay-50ms)</option>
+      </select>
+    </div>
+    <div class="row padding x1">
+      <input type="number" id="array-size" placeholder="Enter Array Size" onkeydown="if(event.key==='.'){event.preventDefault();}" name="array-size" min="10" max="500">
+    </div>
+    <div class="row padding">
+      <button class="gen-array" id="gen-array" type="button" onclick="handleArraySize()">Generate Array</button>
+    </div>
+    <div class="row padding">
+      <button class="sort" id="sort" onclick="handleSort()">Sort the Array</button>
+    </div>
+    <div class="data-container box"></div>
+    <div class="box image"></div>
+    <div class="bottom">
+      <h2 id="comp">Number Of Comparisons : </h2>
+      <h2 id="swap">Number Of Swaps : </h2>
+    </div>
+    <div class="bottom x2">
+      <button class="reset" id="reset" onclick="reset()">Reset</button>
+    </div>
+  </div>
+  <script src="sorting.js"></script>
+</body>
+
+</html>

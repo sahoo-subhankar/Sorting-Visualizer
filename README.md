@@ -1,4 +1,4 @@
-# Time_Based_Typing_Game
+# Sorting-Visualizer
 
 ### Introduction
 
